@@ -14,7 +14,7 @@ struct MainView: View {
 
     let openAI = OpenAISwift(authToken: "<ENTER YOUR TOKEN>")
 
-    @State private var answers: [String] = []
+    @EnvironmentObject private var model: Model
 
     private var isFormValid: Bool {
         !chatText.isEmptyOrWhiteSpace
@@ -26,7 +26,19 @@ struct MainView: View {
             case .success(let success):
                 let answer = success.choices?.first?.text ?? ""
                 print(answer)
-                answers.append(answer)
+                let query = Query(question: chatText, answer: answer)
+
+                DispatchQueue.main.async {
+                    model.queries.append(query)
+                }
+
+                do {
+                    try model.saveQuery(query)
+                } catch {
+                    print("Error!!! : \(error.localizedDescription)")
+                }
+                
+                chatText = ""
             case .failure(let failure):
                 print(failure.localizedDescription)
             }
@@ -36,8 +48,12 @@ struct MainView: View {
     var body: some View {
         VStack {
             
-            List(answers, id: \.self) { answer in
-                Text(answer).foregroundColor(.black)
+            List(model.queries) { query in
+                VStack {
+                    Text(query.question)
+                        .fontWeight(.bold)
+                    Text(query.answer)
+                }
             }
             
             Spacer()
@@ -60,9 +76,10 @@ struct MainView: View {
         }.padding()
     }
 }
-
+ 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(Model())
     }
 }
