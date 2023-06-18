@@ -21,6 +21,10 @@
 		3D279D0B2A3EFEFE00C1B06C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D092A3EFEFE00C1B06C /* MainView.swift */; };
 		3D279D0E2A3F008B00C1B06C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */; };
 		3D279D0F2A3F008B00C1B06C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */; };
+		3D279D122A3F063300C1B06C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D112A3F063300C1B06C /* CoreDataManager.swift */; };
+		3D279D132A3F063300C1B06C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D112A3F063300C1B06C /* CoreDataManager.swift */; };
+		3D279D162A3F072800C1B06C /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D142A3F072800C1B06C /* HistoryModel.xcdatamodeld */; };
+		3D279D172A3F072800C1B06C /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D142A3F072800C1B06C /* HistoryModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,8 @@
 		3D279CFE2A3EFA4300C1B06C /* macOS_ChatGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_ChatGPT.entitlements; sourceTree = "<group>"; };
 		3D279D092A3EFEFE00C1B06C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		3D279D112A3F063300C1B06C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3D279D152A3F072800C1B06C /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +127,10 @@
 		3D279D022A3EFA5300C1B06C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3D279D102A3F061C00C1B06C /* Managers */,
 				3D279D0C2A3F006C00C1B06C /* Extensions */,
 				3D279D092A3EFEFE00C1B06C /* MainView.swift */,
+				3D279D142A3F072800C1B06C /* HistoryModel.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -140,6 +148,14 @@
 				3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D279D102A3F061C00C1B06C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3D279D112A3F063300C1B06C /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +270,8 @@
 				3D279D0E2A3F008B00C1B06C /* String+Extensions.swift in Sources */,
 				3D279CE62A3EFA0D00C1B06C /* ContentView.swift in Sources */,
 				3D279D0A2A3EFEFE00C1B06C /* MainView.swift in Sources */,
+				3D279D122A3F063300C1B06C /* CoreDataManager.swift in Sources */,
+				3D279D162A3F072800C1B06C /* HistoryModel.xcdatamodeld in Sources */,
 				3D279CE42A3EFA0D00C1B06C /* iOS_ChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +283,8 @@
 				3D279D0F2A3F008B00C1B06C /* String+Extensions.swift in Sources */,
 				3D279CF82A3EFA4200C1B06C /* ContentView.swift in Sources */,
 				3D279D0B2A3EFEFE00C1B06C /* MainView.swift in Sources */,
+				3D279D132A3F063300C1B06C /* CoreDataManager.swift in Sources */,
+				3D279D172A3F072800C1B06C /* HistoryModel.xcdatamodeld in Sources */,
 				3D279CF62A3EFA4200C1B06C /* macOS_ChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +674,19 @@
 			productName = OpenAISwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		3D279D142A3F072800C1B06C /* HistoryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D279D152A3F072800C1B06C /* HistoryModel.xcdatamodel */,
+			);
+			currentVersion = 3D279D152A3F072800C1B06C /* HistoryModel.xcdatamodel */;
+			path = HistoryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3D279CD62A3EF9C000C1B06C /* Project object */;
 }
