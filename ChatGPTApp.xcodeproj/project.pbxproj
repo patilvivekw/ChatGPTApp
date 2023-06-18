@@ -29,6 +29,8 @@
 		3D279D1B2A3F085600C1B06C /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D192A3F085600C1B06C /* Query.swift */; };
 		3D279D1D2A3F08BD00C1B06C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D1C2A3F08BD00C1B06C /* Model.swift */; };
 		3D279D1E2A3F08BD00C1B06C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D1C2A3F08BD00C1B06C /* Model.swift */; };
+		3D279D202A3F0CF400C1B06C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D1F2A3F0CF400C1B06C /* HistoryView.swift */; };
+		3D279D212A3F0CF400C1B06C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D1F2A3F0CF400C1B06C /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,7 @@
 		3D279D152A3F072800C1B06C /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
 		3D279D192A3F085600C1B06C /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		3D279D1C2A3F08BD00C1B06C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3D279D1F2A3F0CF400C1B06C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 				3D279D0C2A3F006C00C1B06C /* Extensions */,
 				3D279D092A3EFEFE00C1B06C /* MainView.swift */,
 				3D279D142A3F072800C1B06C /* HistoryModel.xcdatamodeld */,
+				3D279D1F2A3F0CF400C1B06C /* HistoryView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -290,6 +294,7 @@
 				3D279D122A3F063300C1B06C /* CoreDataManager.swift in Sources */,
 				3D279D162A3F072800C1B06C /* HistoryModel.xcdatamodeld in Sources */,
 				3D279CE42A3EFA0D00C1B06C /* iOS_ChatGPTApp.swift in Sources */,
+				3D279D202A3F0CF400C1B06C /* HistoryView.swift in Sources */,
 				3D279D1D2A3F08BD00C1B06C /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +310,7 @@
 				3D279D132A3F063300C1B06C /* CoreDataManager.swift in Sources */,
 				3D279D172A3F072800C1B06C /* HistoryModel.xcdatamodeld in Sources */,
 				3D279CF62A3EFA4200C1B06C /* macOS_ChatGPTApp.swift in Sources */,
+				3D279D212A3F0CF400C1B06C /* HistoryView.swift in Sources */,
 				3D279D1E2A3F08BD00C1B06C /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
