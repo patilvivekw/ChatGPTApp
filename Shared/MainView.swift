@@ -49,12 +49,14 @@ struct MainView: View {
         VStack {
             
             List(model.queries) { query in
-                VStack {
+                VStack(alignment: .leading) {
                     Text(query.question)
                         .fontWeight(.bold)
                     Text(query.answer)
-                }
-            }
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.bottom], 10)
+                    .listRowSeparator(.hidden)
+            }.listStyle(.plain)
             
             Spacer()
             HStack {
@@ -74,9 +76,12 @@ struct MainView: View {
             }
             
         }.padding()
+            .onChange(of: model.query) { query in
+                model.queries.append(query)
+            }
     }
 }
- 
+
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
