@@ -15,6 +15,8 @@ struct MainView: View {
     let openAI = OpenAISwift(authToken: "<ENTER YOUR TOKEN>")
 
     @EnvironmentObject private var model: Model
+    
+    @State private var isSearching: Bool = false
 
     private var isFormValid: Bool {
         !chatText.isEmptyOrWhiteSpace
@@ -39,7 +41,9 @@ struct MainView: View {
                 }
                 
                 chatText = ""
+                isSearching = false
             case .failure(let failure):
+                isSearching = false
                 print(failure.localizedDescription)
             }
         }
@@ -77,6 +81,7 @@ struct MainView: View {
                     .textFieldStyle(.roundedBorder)
                 Button(action: {
                     // action
+                    isSearching = true
                     performSearch()
                 }, label: {
                     Image(systemName: "paperplane.circle.fill")
@@ -91,6 +96,10 @@ struct MainView: View {
         }.padding()
             .onChange(of: model.query) { query in
                 model.queries.append(query)
+            }.overlay(alignment: .center) {
+                if isSearching {
+                    ProgressView("Searching...")
+                }
             }
     }
 }
