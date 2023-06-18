@@ -17,6 +17,10 @@
 		3D279CFD2A3EFA4300C1B06C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D279CFC2A3EFA4300C1B06C /* Preview Assets.xcassets */; };
 		3D279D052A3EFBDC00C1B06C /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D279D042A3EFBDC00C1B06C /* OpenAISwift */; };
 		3D279D082A3EFC1300C1B06C /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D279D072A3EFC1300C1B06C /* OpenAISwift */; };
+		3D279D0A2A3EFEFE00C1B06C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D092A3EFEFE00C1B06C /* MainView.swift */; };
+		3D279D0B2A3EFEFE00C1B06C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D092A3EFEFE00C1B06C /* MainView.swift */; };
+		3D279D0E2A3F008B00C1B06C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */; };
+		3D279D0F2A3F008B00C1B06C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,8 @@
 		3D279CF92A3EFA4300C1B06C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D279CFC2A3EFA4300C1B06C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D279CFE2A3EFA4300C1B06C /* macOS_ChatGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_ChatGPT.entitlements; sourceTree = "<group>"; };
+		3D279D092A3EFEFE00C1B06C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 		3D279D022A3EFA5300C1B06C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3D279D0C2A3F006C00C1B06C /* Extensions */,
+				3D279D092A3EFEFE00C1B06C /* MainView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -124,6 +132,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D279D0C2A3F006C00C1B06C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D279D0D2A3F008B00C1B06C /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D279D0E2A3F008B00C1B06C /* String+Extensions.swift in Sources */,
 				3D279CE62A3EFA0D00C1B06C /* ContentView.swift in Sources */,
+				3D279D0A2A3EFEFE00C1B06C /* MainView.swift in Sources */,
 				3D279CE42A3EFA0D00C1B06C /* iOS_ChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D279D0F2A3F008B00C1B06C /* String+Extensions.swift in Sources */,
 				3D279CF82A3EFA4200C1B06C /* ContentView.swift in Sources */,
+				3D279D0B2A3EFEFE00C1B06C /* MainView.swift in Sources */,
 				3D279CF62A3EFA4200C1B06C /* macOS_ChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
